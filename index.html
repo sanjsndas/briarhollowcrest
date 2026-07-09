@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briar Hollowcrest Moss · Mycological arts & forest wisdom</title>
+  <!-- fonts & minimal style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3ee;
+      color: #1e1c1a;
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+    }
+
+    /* unique typography & spacing */
+    h1, h2, h3, h4 {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #b48b7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin: 2rem 0 0.8rem;
+      color: #3f322b;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 75ch;
+      font-weight: 350;
+    }
+
+    a {
+      color: #5f3e2e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbb4a8;
+    }
+
+    a:hover {
+      border-bottom: 2px solid #5f3e2e;
+    }
+
+    .container {
+      padding: 2.5rem 3rem;
+    }
+
+    /* header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      border-bottom: 1px solid #e3d6cd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 40px 4px 40px 4px;
+    }
+
+    .logo span {
+      font-style: italic;
+      font-weight: 300;
+      color: #c9b1a2;
+    }
+
+    .nav a {
+      margin-left: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: none;
+      letter-spacing: 0.02em;
+      color: #2f2621;
+    }
+
+    .nav a:hover {
+      border-bottom: 2px solid #b48b7a;
+    }
+
+    /* hero */
+    .hero {
+      background: #eae0d8;
+      padding: 4rem 3rem 3.5rem;
+      margin: 0 0 1rem;
+      border-radius: 0 0 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 4.2rem;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 70ch;
+      margin: 1.5rem 0 2rem;
+      font-weight: 350;
+      color: #2f2621;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      margin: 2rem 0 0.4rem;
+      font-weight: 450;
+    }
+
+    .hero-tags span {
+      background: #fcfaf7;
+      padding: 0.2rem 1.4rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      border: 1px solid #cbb4a8;
+      box-shadow: 0 2px 0 #b48b7a;
+    }
+
+    /* cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .card {
+      background: #fcfaf7;
+      padding: 1.8rem 1.8rem 2.2rem;
+      border-radius: 28px 8px 28px 8px;
+      border: 1px solid #e6d7cc;
+      transition: 0.15s ease;
+      box-shadow: 0 6px 0 #dacbc0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #b48b7a;
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6f5546;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #b48b7a;
+      display: inline-block;
+    }
+
+    /* featured image (only one) */
+    .featured-image {
+      margin: 2rem 0 1.5rem;
+      border-radius: 40px 8px 40px 8px;
+      overflow: hidden;
+      background: #dbccc0;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3f322b;
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200"><rect width="800" height="200" fill="%23dacbc0"/><circle cx="140" cy="100" r="50" fill="%23b48b7a" opacity="0.4"/><circle cx="320" cy="80" r="40" fill="%23997a68" opacity="0.3"/><circle cx="600" cy="120" r="60" fill="%23a58470" opacity="0.25"/><text x="420" y="120" font-family="Instrument Serif, serif" font-size="40" fill="%233f322b" opacity="0.6">mycelium &amp; moss</text></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .featured-image span {
+      background: #fcfaf7cc;
+      padding: 0.3rem 2.2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* category image (small) */
+    .category-badge {
+      display: inline-block;
+      background: #1e1c1a;
+      color: #ede5dd;
+      padding: 0.2rem 1.6rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    /* lists and tables */
+    ul, ol {
+      margin: 0 0 1.8rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      background: #f7f1ec;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.8rem 1.2rem;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    td {
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid #e3d6cd;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #e3d6cd;
+      padding: 1.4rem 0;
+    }
+
+    .faq-item h4 {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      margin: 0.4rem 0 0;
+      color: #3f322b;
+    }
+
+    /* newsletter */
+    .newsletter {
+      background: #eae0d8;
+      padding: 3rem 2.5rem;
+      border-radius: 60px 8px 60px 8px;
+      margin: 3rem 0 1rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: 2.4rem;
+      margin: 0 0 0.2rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .newsletter p {
+      max-width: 60ch;
+      margin: 0.5rem auto 1.8rem;
+    }
+
+    .newsletter input {
+      padding: 0.8rem 1.6rem;
+      border: 1px solid #b48b7a;
+      border-radius: 60px;
+      width: 280px;
+      max-width: 80%;
+      background: #fcfaf7;
+      font-size: 1rem;
+    }
+
+    .newsletter button {
+      background: #1e1c1a;
+      border: none;
+      color: #f0e7e0;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 4rem;
+      border-top: 2px solid #e3d6cd;
+      padding: 2.5rem 3rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #3f322b;
+    }
+
+    .footer a {
+      border-bottom: none;
+      margin: 0 1rem 0 0;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .container { padding: 1.5rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav a { margin-left: 0; margin-right: 1.8rem; }
+      .hero { padding: 2.5rem 1.5rem; }
+      .hero h1 { font-size: 2.8rem; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .newsletter input { width: 100%; margin-bottom: 0.8rem; }
+      .newsletter button { width: 100%; margin-left: 0; }
+    }
+
+    /* unique infographic placeholder (only one) */
+    .infographic-box {
+      background: #ede5dd;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2.5rem 2rem;
+      margin: 2.8rem 0;
+      border: 1px solid #cbb4a8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .infographic-box .stat {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      background: #fcfaf7;
+      padding: 0.2rem 1.6rem;
+      border-radius: 60px;
+      box-shadow: 0 4px 0 #b48b7a;
+    }
+
+    /* minimal images: only hero, featured, category (inline) and infographic */
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- header -->
+  <header class="site-header">
+    <div class="logo">Briar <span>· Hollowcrest</span></div>
+    <nav class="nav">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briar Hollowcrest Moss · Mycological arts & forest wisdom</title>
+  <!-- fonts & minimal style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3ee;
+      color: #1e1c1a;
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+    }
+
+    /* unique typography & spacing */
+    h1, h2, h3, h4 {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #b48b7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin: 2rem 0 0.8rem;
+      color: #3f322b;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 75ch;
+      font-weight: 350;
+    }
+
+    a {
+      color: #5f3e2e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbb4a8;
+    }
+
+    a:hover {
+      border-bottom: 2px solid #5f3e2e;
+    }
+
+    .container {
+      padding: 2.5rem 3rem;
+    }
+
+    /* header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      border-bottom: 1px solid #e3d6cd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 40px 4px 40px 4px;
+    }
+
+    .logo span {
+      font-style: italic;
+      font-weight: 300;
+      color: #c9b1a2;
+    }
+
+    .nav a {
+      margin-left: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: none;
+      letter-spacing: 0.02em;
+      color: #2f2621;
+    }
+
+    .nav a:hover {
+      border-bottom: 2px solid #b48b7a;
+    }
+
+    /* hero */
+    .hero {
+      background: #eae0d8;
+      padding: 4rem 3rem 3.5rem;
+      margin: 0 0 1rem;
+      border-radius: 0 0 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 4.2rem;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 70ch;
+      margin: 1.5rem 0 2rem;
+      font-weight: 350;
+      color: #2f2621;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      margin: 2rem 0 0.4rem;
+      font-weight: 450;
+    }
+
+    .hero-tags span {
+      background: #fcfaf7;
+      padding: 0.2rem 1.4rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      border: 1px solid #cbb4a8;
+      box-shadow: 0 2px 0 #b48b7a;
+    }
+
+    /* cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .card {
+      background: #fcfaf7;
+      padding: 1.8rem 1.8rem 2.2rem;
+      border-radius: 28px 8px 28px 8px;
+      border: 1px solid #e6d7cc;
+      transition: 0.15s ease;
+      box-shadow: 0 6px 0 #dacbc0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #b48b7a;
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6f5546;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #b48b7a;
+      display: inline-block;
+    }
+
+    /* featured image (only one) */
+    .featured-image {
+      margin: 2rem 0 1.5rem;
+      border-radius: 40px 8px 40px 8px;
+      overflow: hidden;
+      background: #dbccc0;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3f322b;
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200"><rect width="800" height="200" fill="%23dacbc0"/><circle cx="140" cy="100" r="50" fill="%23b48b7a" opacity="0.4"/><circle cx="320" cy="80" r="40" fill="%23997a68" opacity="0.3"/><circle cx="600" cy="120" r="60" fill="%23a58470" opacity="0.25"/><text x="420" y="120" font-family="Instrument Serif, serif" font-size="40" fill="%233f322b" opacity="0.6">mycelium &amp; moss</text></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .featured-image span {
+      background: #fcfaf7cc;
+      padding: 0.3rem 2.2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* category image (small) */
+    .category-badge {
+      display: inline-block;
+      background: #1e1c1a;
+      color: #ede5dd;
+      padding: 0.2rem 1.6rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    /* lists and tables */
+    ul, ol {
+      margin: 0 0 1.8rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      background: #f7f1ec;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.8rem 1.2rem;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    td {
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid #e3d6cd;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #e3d6cd;
+      padding: 1.4rem 0;
+    }
+
+    .faq-item h4 {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      margin: 0.4rem 0 0;
+      color: #3f322b;
+    }
+
+    /* newsletter */
+    .newsletter {
+      background: #eae0d8;
+      padding: 3rem 2.5rem;
+      border-radius: 60px 8px 60px 8px;
+      margin: 3rem 0 1rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: 2.4rem;
+      margin: 0 0 0.2rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .newsletter p {
+      max-width: 60ch;
+      margin: 0.5rem auto 1.8rem;
+    }
+
+    .newsletter input {
+      padding: 0.8rem 1.6rem;
+      border: 1px solid #b48b7a;
+      border-radius: 60px;
+      width: 280px;
+      max-width: 80%;
+      background: #fcfaf7;
+      font-size: 1rem;
+    }
+
+    .newsletter button {
+      background: #1e1c1a;
+      border: none;
+      color: #f0e7e0;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 4rem;
+      border-top: 2px solid #e3d6cd;
+      padding: 2.5rem 3rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #3f322b;
+    }
+
+    .footer a {
+      border-bottom: none;
+      margin: 0 1rem 0 0;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .container { padding: 1.5rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav a { margin-left: 0; margin-right: 1.8rem; }
+      .hero { padding: 2.5rem 1.5rem; }
+      .hero h1 { font-size: 2.8rem; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .newsletter input { width: 100%; margin-bottom: 0.8rem; }
+      .newsletter button { width: 100%; margin-left: 0; }
+    }
+
+    /* unique infographic placeholder (only one) */
+    .infographic-box {
+      background: #ede5dd;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2.5rem 2rem;
+      margin: 2.8rem 0;
+      border: 1px solid #cbb4a8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .infographic-box .stat {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      background: #fcfaf7;
+      padding: 0.2rem 1.6rem;
+      border-radius: 60px;
+      box-shadow: 0 4px 0 #b48b7a;
+    }
+
+    /* minimal images: only hero, featured, category (inline) and infographic */
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- header -->
+  <header class="site-header">
+    <div class="logo">Briar <span>· Hollowcrest</span></div>
+    <nav class="nav">
+      <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- 1. HERO -->
+    <section class="hero">
+      <h1>Moss &amp; mycelium ·&nbsp;the art of forest wisdom</h1>
+      <p>Briar Hollowcrest Moss is a living archive of mycological arts, forest ecology, and the quiet intelligence of fungi. We cultivate deep knowledge through field notes, essays, and illustrated guides.</p>
+      <div class="hero-tags">
+        <span>🌿 mycorrhizal networks</span>
+        <span>🍄 fungal foraging</span>
+        <span>🌲 forest medicine</span>
+        <span>📜 ancient woodcraft</span>
+      </div>
+    </section>
+
+    <!-- 2. FEATURED ARTICLES (card grid) -->
+    <h2>Featured essays</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="category-badge">Mycology</span>
+        <h3>The hidden language of hyphae</h3>
+        <div class="meta">6 min read · 12 Apr 2026</div>
+        <p>Beneath the forest floor, a vast network of fungal threads exchanges nutrients, warnings, and memory. A deep dive into the wood-wide web.</p>
+        <a href="#" class="read-more">read essay →</a>
+      </div>
+      <div class="card">
+        <span class="category-badge">Foraging</span>
+        <h3>Autumn chanterelle &amp; the old growth</h3>
+        <div class="meta">8 min read · 2 Mar 2026</div>
+        <p>Tracking the golden chanterelle in ancient oak forests — a field guide to mycorrhizal partnerships and sustainable harvest.</p>
+        <a href="#" class="read-more">read essay →</a>
+      </div>
+      <div class="card">
+        <span class="category-badge">Ethnobotany</span>
+        <h3>Fungal dyes of the Celtic wilds</h3>
+        <div class="meta">5 min read · 18 Jan 2026</div>
+        <p>From oak mazegill to dyer’s polypore, the forgotten palette of forest fungi and their use in traditional textile arts.</p>
+        <a href="#" class="read-more">read essay →</a>
+      </div>
+    </div>
+
+    <!-- featured article image (one) -->
+    <div class="featured-image">
+      <span>🍄 · mycelial mind</span>
+    </div>
+
+    <!-- 3. BEGINNER GUIDES & 4. EXPERT RESOURCES combined -->
+    <h2>Guides &amp; deep dives</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🔍 Beginner’s guide to forest fungi</h3>
+        <p>Step-by-step: how to observe, identify, and ethically interact with mushrooms. Includes a printable checklist.</p>
+        <a href="#" class="read-more">start here →</a>
+      </div>
+      <div class="card">
+        <h3>🧪 Expert resource: spore printing</h3>
+        <p>Advanced techniques for spore collection, microscopy, and cultivation — with a comparison of substrates.</p>
+        <a href="#" class="read-more">explore →</a>
+      </div>
+    </div>
+
+    <!-- 5. POPULAR CATEGORIES (with category image placeholder) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2.5rem 0 1rem; background: #ede5dd; padding: 1.5rem 2rem; border-radius: 60px 8px 60px 8px;">
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">🌲 Old Forest</span></div>
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">🍄 Mushroom ID</span></div>
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">🌿 Ethnomycology</span></div>
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">📖 Forest lore</span></div>
+    </div>
+
+    <!-- 6. TRENDING TOPICS (list) -->
+    <h2>Trending topics</h2>
+    <ul style="columns:2 220px; column-gap:2.5rem;">
+      <li>Mycorrhizal intelligence · new research</li>
+      <li>Fungal remediation of heavy metals</li>
+      <li>Winter chaga · harvesting and preparation</li>
+      <li>The folklore of fairy rings</li>
+    </ul>
+
+    <!-- 7. LATEST ARTICLES (mini grid) -->
+    <h2>Latest from the journal</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Lichen as a climate indicator</h3><p>Field observations from the Caledonian forest.</p><a href="#" class="read-more">read</a></div>
+      <div class="card"><h3>Fungal dyes: a practical guide</h3><p>Mordants, fibers, and colourfastness.</p><a href="#" class="read-more">read</a></div>
+      <div class="card"><h3>Moss gardening for beginners</h3><p>Creating a living moss tapestry indoors.</p><a href="#" class="read-more">read</a></div>
+    </div>
+
+    <!-- 8. IN-DEPTH TUTORIALS (with table) -->
+    <h2>In-depth tutorials</h2>
+    <table>
+      <thead><tr><th>Tutorial</th><th>Skill level</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Cultivating oyster mushrooms on straw</td><td>Beginner</td><td>4 weeks</td></tr>
+        <tr><td>Making a spore print &amp; slide</td><td>Intermediate</td><td>2 hours</td></tr>
+        <tr><td>Building a forest terrarium</td><td>Advanced</td><td>3 days</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 9. RESOURCE HUB (infographic placeholder) -->
+    <div class="infographic-box">
+      <span class="stat">📊 87%</span>
+      <span style="font-weight:350;">of forest trees depend on mycorrhizal networks</span>
+      <span class="stat">🍄 240+</span>
+      <span style="font-weight:350;">fungi species documented in our field guide</span>
+    </div>
+
+    <!-- 10. FAQ -->
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item"><h4>Is foraging for wild mushrooms safe?</h4><p>Yes, with proper identification. We always recommend using multiple field guides and never consuming any fungus you cannot identify with 100% certainty.</p></div>
+    <div class="faq-item"><h4>How do I start a mycology journal?</h4><p>Begin with a simple notebook, sketch the mushroom, note the habitat, weather, and substrate. Over time, you’ll build a personal reference.</p></div>
+    <div class="faq-item"><h4>What is the best mushroom for a beginner to cultivate?</h4><p>Oyster mushrooms (Pleurotus) are forgiving and fast-growing — ideal for first-time growers.</p></div>
+
+    <!-- 11. NEWSLETTER -->
+    <div class="newsletter">
+      <h3>📬 Moss &amp; mycelium letters</h3>
+      <p>Seasonal field notes, exclusive essays, and early access to new guides. No spam, only forest wisdom.</p>
+      <input type="email" placeholder="you@forest.com" />
+      <button>subscribe</button>
+    </div>
+  </main>
+
+  <!-- 12. FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Briar Hollowcrest Moss · all rights reserved</div>
+    <div>
+      <a href="#">about</a>
+      <a href="#">colophon</a>
+      <a href="#">contact</a>
+      <a href="#">rss</a>
+    </div>
+  </footer>
+</div>
+<!-- only 4 images: hero bg (inline), featured image, category badges (inline) and infographic (stat) — all minimal -->
+</body>
+</html>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- 1. HERO -->
+    <section class="hero">
+      <h1>Moss &amp; mycelium ·&nbsp;the art of forest wisdom</h1>
+      <p>Briar Hollowcrest Moss is a living archive of mycological arts, forest ecology, and the quiet intelligence of fungi. We cultivate deep knowledge through field notes, essays, and illustrated guides.</p>
+      <div class="hero-tags">
+        <span>🌿 mycorrhizal networks</span>
+        <span>🍄 fungal foraging</span>
+        <span>🌲 forest medicine</span>
+        <span>📜 ancient woodcraft</span>
+      </div>
+    </section>
+
+    <!-- 2. FEATURED ARTICLES (card grid) -->
+    <h2>Featured essays</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="category-badge">Mycology</span>
+        <h3>The hidden language of hyphae</h3>
+        <div class="meta">6 min read · 12 Apr 2026</div>
+        <p>Beneath the forest floor, a vast network of fungal threads exchanges nutrients, warnings, and memory. A deep dive into the wood-wide web.</p>
+        <a href="#" class="read-more">read essay →</a>
+      </div>
+      <div class="card">
+        <span class="category-badge">Foraging</span>
+        <h3>Autumn chanterelle &amp; the old growth</h3>
+        <div class="meta">8 min read · 2 Mar 2026</div>
+        <p>Tracking the golden chanterelle in ancient oak forests — a field guide to mycorrhizal partnerships and sustainable harvest.</p>
+        <a href="#" class="read-more">read essay →</a>
+      </div>
+      <div class="card">
+        <span class="category-badge">Ethnobotany</span>
+        <h3>Fungal dyes of the Celtic wilds</h3>
+        <div class="meta">5 min read · 18 Jan 2026</div>
+        <p>From oak mazegill to dyer’s polypore, the forgotten palette of forest fungi and their use in traditional textile arts.</p>
+        <a href="#" class="read-more">read essay →</a>
+      </div>
+    </div>
+
+    <!-- featured article image (one) -->
+    <div class="featured-image">
+      <span>🍄 · mycelial mind</span>
+    </div>
+
+    <!-- 3. BEGINNER GUIDES & 4. EXPERT RESOURCES combined -->
+    <h2>Guides &amp; deep dives</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🔍 Beginner’s guide to forest fungi</h3>
+        <p>Step-by-step: how to observe, identify, and ethically interact with mushrooms. Includes a printable checklist.</p>
+        <a href="#" class="read-more">start here →</a>
+      </div>
+      <div class="card">
+        <h3>🧪 Expert resource: spore printing</h3>
+        <p>Advanced techniques for spore collection, microscopy, and cultivation — with a comparison of substrates.</p>
+        <a href="#" class="read-more">explore →</a>
+      </div>
+    </div>
+
+    <!-- 5. POPULAR CATEGORIES (with category image placeholder) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2.5rem 0 1rem; background: #ede5dd; padding: 1.5rem 2rem; border-radius: 60px 8px 60px 8px;">
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">🌲 Old Forest</span></div>
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">🍄 Mushroom ID</span></div>
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">🌿 Ethnomycology</span></div>
+      <div style="flex:1; min-width:120px;"><span style="background:#fcfaf7; padding:0.2rem 1.6rem; border-radius:40px;">📖 Forest lore</span></div>
+    </div>
+
+    <!-- 6. TRENDING TOPICS (list) -->
+    <h2>Trending topics</h2>
+    <ul style="columns:2 220px; column-gap:2.5rem;">
+      <li>Mycorrhizal intelligence · new research</li>
+      <li>Fungal remediation of heavy metals</li>
+      <li>Winter chaga · harvesting and preparation</li>
+      <li>The folklore of fairy rings</li>
+    </ul>
+
+    <!-- 7. LATEST ARTICLES (mini grid) -->
+    <h2>Latest from the journal</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Lichen as a climate indicator</h3><p>Field observations from the Caledonian forest.</p><a href="#" class="read-more">read</a></div>
+      <div class="card"><h3>Fungal dyes: a practical guide</h3><p>Mordants, fibers, and colourfastness.</p><a href="#" class="read-more">read</a></div>
+      <div class="card"><h3>Moss gardening for beginners</h3><p>Creating a living moss tapestry indoors.</p><a href="#" class="read-more">read</a></div>
+    </div>
+
+    <!-- 8. IN-DEPTH TUTORIALS (with table) -->
+    <h2>In-depth tutorials</h2>
+    <table>
+      <thead><tr><th>Tutorial</th><th>Skill level</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Cultivating oyster mushrooms on straw</td><td>Beginner</td><td>4 weeks</td></tr>
+        <tr><td>Making a spore print &amp; slide</td><td>Intermediate</td><td>2 hours</td></tr>
+        <tr><td>Building a forest terrarium</td><td>Advanced</td><td>3 days</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 9. RESOURCE HUB (infographic placeholder) -->
+    <div class="infographic-box">
+      <span class="stat">📊 87%</span>
+      <span style="font-weight:350;">of forest trees depend on mycorrhizal networks</span>
+      <span class="stat">🍄 240+</span>
+      <span style="font-weight:350;">fungi species documented in our field guide</span>
+    </div>
+
+    <!-- 10. FAQ -->
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item"><h4>Is foraging for wild mushrooms safe?</h4><p>Yes, with proper identification. We always recommend using multiple field guides and never consuming any fungus you cannot identify with 100% certainty.</p></div>
+    <div class="faq-item"><h4>How do I start a mycology journal?</h4><p>Begin with a simple notebook, sketch the mushroom, note the habitat, weather, and substrate. Over time, you’ll build a personal reference.</p></div>
+    <div class="faq-item"><h4>What is the best mushroom for a beginner to cultivate?</h4><p>Oyster mushrooms (Pleurotus) are forgiving and fast-growing — ideal for first-time growers.</p></div>
+
+    <!-- 11. NEWSLETTER -->
+    <div class="newsletter">
+      <h3>📬 Moss &amp; mycelium letters</h3>
+      <p>Seasonal field notes, exclusive essays, and early access to new guides. No spam, only forest wisdom.</p>
+      <input type="email" placeholder="you@forest.com" />
+      <button>subscribe</button>
+    </div>
+  </main>
+
+  <!-- 12. FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Briar Hollowcrest Moss · all rights reserved</div>
+    <div>
+      <a href="#">about</a>
+      <a href="#">colophon</a>
+      <a href="#">contact</a>
+      <a href="#">rss</a>
+    </div>
+  </footer>
+</div>
+<!-- only 4 images: hero bg (inline), featured image, category badges (inline) and infographic (stat) — all minimal -->
+</body>
+</html>

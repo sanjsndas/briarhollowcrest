@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Briar Hollowcrest Moss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3ee;
+      color: #1e1c1a;
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #b48b7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin: 2rem 0 0.8rem;
+      color: #3f322b;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 75ch;
+      font-weight: 350;
+    }
+
+    a {
+      color: #5f3e2e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbb4a8;
+    }
+
+    a:hover {
+      border-bottom: 2px solid #5f3e2e;
+    }
+
+    .container {
+      padding: 2.5rem 3rem;
+    }
+
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      border-bottom: 1px solid #e3d6cd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 40px 4px 40px 4px;
+    }
+
+    .logo span {
+      font-style: italic;
+      font-weight: 300;
+      color: #c9b1a2;
+    }
+
+    .nav a {
+      margin-left: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: none;
+      letter-spacing: 0.02em;
+      color: #2f2621;
+    }
+
+    .nav a:hover {
+      border-bottom: 2px solid #b48b7a;
+    }
+
+    .hero {
+      background: #eae0d8;
+      padding: 3rem 3rem 2.5rem;
+      margin: 0 0 1rem;
+      border-radius: 0 0 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 70ch;
+      margin: 1rem 0 0.5rem;
+      font-weight: 350;
+      color: #2f2621;
+    }
+
+    .featured-image {
+      margin: 2rem 0 1.5rem;
+      border-radius: 40px 8px 40px 8px;
+      overflow: hidden;
+      background: #dbccc0;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3f322b;
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200"><rect width="800" height="200" fill="%23dacbc0"/><circle cx="140" cy="100" r="50" fill="%23b48b7a" opacity="0.4"/><circle cx="320" cy="80" r="40" fill="%23997a68" opacity="0.3"/><circle cx="600" cy="120" r="60" fill="%23a58470" opacity="0.25"/><text x="420" y="120" font-family="Instrument Serif, serif" font-size="40" fill="%233f322b" opacity="0.6">mycelium &amp; moss</text></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .featured-image span {
+      background: #fcfaf7cc;
+      padding: 0.3rem 2.2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .card {
+      background: #fcfaf7;
+      padding: 1.8rem 1.8rem 2.2rem;
+      border-radius: 28px 8px 28px 8px;
+      border: 1px solid #e6d7cc;
+      box-shadow: 0 6px 0 #dacbc0;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6f5546;
+      margin-bottom: 0.6rem;
+    }
+
+    .infographic-box {
+      background: #ede5dd;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2.5rem 2rem;
+      margin: 2.8rem 0;
+      border: 1px solid #cbb4a8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .infographic-box .stat {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      background: #fcfaf7;
+      padding: 0.2rem 1.6rem;
+      border-radius: 60px;
+      box-shadow: 0 4px 0 #b48b7a;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      border-top: 2px solid #e3d6cd;
+      padding: 2.5rem 3rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #3f322b;
+    }
+
+    .footer a {
+      border-bottom: none;
+      margin: 0 1rem 0 0;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1.5rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav a { margin-left: 0; margin-right: 1.8rem; }
+      .hero { padding: 2rem 1.5rem; }
+      .hero h1 { font-size: 2.8rem; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+
+    .about-highlight {
+      background: #f7f1ec;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2rem 2.5rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .about-highlight p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- header -->
+  <header class="site-header">
+    <div class="logo">Briar <span>· Hollowcrest</span></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="border-bottom: 2px solid #b48b7a;">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- about hero -->
+    <section class="hero">
+      <h1>About Briar ·&nbsp;forest &amp; fungi</h1>
+      <p>Briar Hollowcrest Moss is a living journal, a mycelial archive, and a quiet gathering place for those who listen to the forest. We are rooted in the old ways, yet reaching toward new understandings of ecology, art, and the wisdom of mushrooms.</p>
+    </section>
+
+    <!-- feature image (same aesthetic) -->
+    <div class="featured-image">
+      <span>🌲 · under the canopy</span>
+    </div>
+
+    <!-- about text + mission -->
+    <div class="about-highlight">
+      <h2 style="border-left-color: #997a68; margin-top: 0.2rem;">Our roots</h2>
+      <p>Founded in 2020, Briar Hollowcrest Moss began as a personal field journal — sketches of fungi, observations of mycorrhizal networks, and recipes for forest dyes. Over time, it grew into a collaborative space where mycologists, foragers, artists, and forest walkers share their discoveries.</p>
+      <p>We believe that fungi are the unseen architects of the forest, weaving together life in ways we are only beginning to understand. Our work is dedicated to deepening that understanding through storytelling, illustration, and hands-on practice.</p>
+    </div>
+
+    <!-- values / pillars -->
+    <h2>What we carry</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🌿 Ecological wisdom</h3>
+        <p>We study the forest as a living network, learning from indigenous knowledge, field science, and direct observation. Every essay is rooted in respect for the land.</p>
+      </div>
+      <div class="card">
+        <h3>🍄 Craft &amp; art</h3>
+        <p>From spore prints to fungal dyes, we celebrate the beauty of fungi through traditional craft and contemporary art. Our guides are illustrated with care.</p>
+      </div>
+      <div class="card">
+        <h3>📜 Slow knowledge</h3>
+        <p>We resist the rush of modern information. Here, knowledge ripens slowly — through seasons, through patience, through the quiet work of roots and hyphae.</p>
+      </div>
+    </div>
+
+    <!-- infographic: about stats -->
+    <div class="infographic-box">
+      <span class="stat">🌱 6+</span>
+      <span style="font-weight:350;">seasons of field observations</span>
+      <span class="stat">📖 200+</span>
+      <span style="font-weight:350;">pages of mycelial notes</span>
+    </div>
+
+    <!-- the person behind -->
+    <h2>The keeper</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; background: #ede5dd; padding: 2rem 2.5rem; border-radius: 60px 8px 60px 8px; margin: 1rem 0 2rem;">
+      <div style="flex: 2; min-width: 220px;">
+        <p style="font-size: 1.2rem; font-family: 'Instrument Serif', serif; margin-bottom: 0.5rem;">— Briar Hollowcrest</p>
+        <p>Briar is a mycological artist, forest guide, and writer. With a background in ethnobotany and a deep connection to the Caledonian woods, she has spent the last decade documenting fungal life and teaching others to see the forest floor with new eyes.</p>
+        <p>Her work has been featured in <em>Mycologia</em>, <em>Forest Ecology and Art</em>, and she is the author of <em>The Hyphae Chronicles</em> (2023).</p>
+      </div>
+      <div style="flex: 1; min-width: 140px; background: #fcfaf7; border-radius: 60px 8px 60px 8px; padding: 1.2rem 1.8rem; align-self: center;">
+        <span style="font-size: 4rem; display: block; text-align: center;">🍄</span>
+        <span style="display: block; text-align: center; font-weight: 500;">field &amp; studio</span>
+      </div>
+    </div>
+
+    <!-- collaborators / network -->
+    <h2>Collaborators &amp; contributors</h2>
+    <ul style="columns: 2 200px; column-gap: 2rem; margin: 0.5rem 0 2rem 1.5rem;">
+      <li>Dr. Ellen Maris · mycorrhizal ecology</li>
+      <li>Finn O'Donnell · forest dyeing &amp; textiles</li>
+      <li>Juniper Song · botanical illustration</li>
+      <li>Rory MacTavish · old growth forest guide</li>
+      <li>Mycelium Collective · community science</li>
+    </ul>
+
+    <!-- brief FAQ (context) -->
+    <h2>Common questions about us</h2>
+    <div class="faq-item" style="border-bottom: 1px solid #e3d6cd; padding: 1.2rem 0;">
+      <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.1rem;">Is Briar Hollowcrest a real person?</h4>
+      <p style="margin: 0.2rem 0 0; color: #3f322b;">Yes — Briar is the primary author and curator. The name reflects a lifelong connection to the forest.</p>
+    </div>
+    <div class="faq-item" style="border-bottom: 1px solid #e3d6cd; padding: 1.2rem 0;">
+      <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.1rem;">Can I contribute to the journal?</h4>
+      <p style="margin: 0.2rem 0 0; color: #3f322b;">We welcome pitches from forest artists, mycologists, and writers. Please see our contact page for guidelines.</p>
+    </div>
+    <div class="faq-item" style="padding: 1.2rem 0;">
+      <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.1rem;">Do you lead forest walks or workshops?</h4>
+      <p style="margin: 0.2rem 0 0; color: #3f322b;">Yes — seasonal forays and dye workshops are held in the Scottish Highlands. Subscribe to our newsletter for dates.</p>
+    </div>
+
+    <!-- simple newsletter -->
+    <div class="newsletter" style="background: #eae0d8; padding: 2.5rem 2rem; border-radius: 60px 8px 60px 8px; margin: 2.5rem 0 0.5rem; text-align: center;">
+      <h3 style="font-size: 2.2rem; margin: 0 0 0.2rem; border-left: none; padding-left: 0;">🌲 stay connected</h3>
+      <p style="max-width: 60ch; margin: 0.5rem auto 1.5rem;">Seasonal notes, new essays, and forest wisdom — delivered to your clearing.</p>
+      <input type="email" placeholder="you@forest.com" style="padding: 0.8rem 1.6rem; border: 1px solid #b48b7a; border-radius: 60px; width: 280px; max-width: 80%; background: #fcfaf7; font-size: 1rem;" />
+      <button style="background: #1e1c1a; border: none; color: #f0e7e0; padding: 0.8rem 2.4rem; border-radius: 60px; font-weight: 500; font-size: 1rem; margin-left: 0.4rem; cursor: pointer;">subscribe</button>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>© 2026 Briar Hollowcrest Moss · all rights reserved</div>
+    <div>
+      <a href="about.html">about</a>
+      <a href="#">colophon</a>
+      <a href="contact.html">contact</a>
+      <a href="#">rss</a>
+    </div>
+  </footer>
+</div>
+<!-- only minimal images: hero bg (inline), featured image, infographic stats — all inline, no external files -->
+</body>
+</html>

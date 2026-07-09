@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briar Hollowcrest Moss · contact</title>
+  <!-- fonts & minimal style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3ee;
+      color: #1e1c1a;
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #b48b7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin: 2rem 0 0.8rem;
+      color: #3f322b;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 75ch;
+      font-weight: 350;
+    }
+
+    a {
+      color: #5f3e2e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbb4a8;
+    }
+
+    a:hover {
+      border-bottom: 2px solid #5f3e2e;
+    }
+
+    .container {
+      padding: 2.5rem 3rem;
+    }
+
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      border-bottom: 1px solid #e3d6cd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 40px 4px 40px 4px;
+    }
+
+    .logo span {
+      font-style: italic;
+      font-weight: 300;
+      color: #c9b1a2;
+    }
+
+    .nav a {
+      margin-left: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: none;
+      letter-spacing: 0.02em;
+      color: #2f2621;
+    }
+
+    .nav a:hover {
+      border-bottom: 2px solid #b48b7a;
+    }
+
+    .hero {
+      background: #eae0d8;
+      padding: 4rem 3rem 3.5rem;
+      margin: 0 0 1rem;
+      border-radius: 0 0 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 4.2rem;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 70ch;
+      margin: 1.5rem 0 2rem;
+      font-weight: 350;
+      color: #2f2621;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      margin: 2rem 0 0.4rem;
+      font-weight: 450;
+    }
+
+    .hero-tags span {
+      background: #fcfaf7;
+      padding: 0.2rem 1.4rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      border: 1px solid #cbb4a8;
+      box-shadow: 0 2px 0 #b48b7a;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .card {
+      background: #fcfaf7;
+      padding: 1.8rem 1.8rem 2.2rem;
+      border-radius: 28px 8px 28px 8px;
+      border: 1px solid #e6d7cc;
+      transition: 0.15s ease;
+      box-shadow: 0 6px 0 #dacbc0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #b48b7a;
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6f5546;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #b48b7a;
+      display: inline-block;
+    }
+
+    .featured-image {
+      margin: 2rem 0 1.5rem;
+      border-radius: 40px 8px 40px 8px;
+      overflow: hidden;
+      background: #dbccc0;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3f322b;
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200"><rect width="800" height="200" fill="%23dacbc0"/><circle cx="140" cy="100" r="50" fill="%23b48b7a" opacity="0.4"/><circle cx="320" cy="80" r="40" fill="%23997a68" opacity="0.3"/><circle cx="600" cy="120" r="60" fill="%23a58470" opacity="0.25"/><text x="420" y="120" font-family="Instrument Serif, serif" font-size="40" fill="%233f322b" opacity="0.6">mycelium &amp; moss</text></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .featured-image span {
+      background: #fcfaf7cc;
+      padding: 0.3rem 2.2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+    }
+
+    .category-badge {
+      display: inline-block;
+      background: #1e1c1a;
+      color: #ede5dd;
+      padding: 0.2rem 1.6rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    ul, ol {
+      margin: 0 0 1.8rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      background: #f7f1ec;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.8rem 1.2rem;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    td {
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid #e3d6cd;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e3d6cd;
+      padding: 1.4rem 0;
+    }
+
+    .faq-item h4 {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      margin: 0.4rem 0 0;
+      color: #3f322b;
+    }
+
+    .newsletter {
+      background: #eae0d8;
+      padding: 3rem 2.5rem;
+      border-radius: 60px 8px 60px 8px;
+      margin: 3rem 0 1rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: 2.4rem;
+      margin: 0 0 0.2rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .newsletter p {
+      max-width: 60ch;
+      margin: 0.5rem auto 1.8rem;
+    }
+
+    .newsletter input {
+      padding: 0.8rem 1.6rem;
+      border: 1px solid #b48b7a;
+      border-radius: 60px;
+      width: 280px;
+      max-width: 80%;
+      background: #fcfaf7;
+      font-size: 1rem;
+    }
+
+    .newsletter button {
+      background: #1e1c1a;
+      border: none;
+      color: #f0e7e0;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      border-top: 2px solid #e3d6cd;
+      padding: 2.5rem 3rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #3f322b;
+    }
+
+    .footer a {
+      border-bottom: none;
+      margin: 0 1rem 0 0;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1.5rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav a { margin-left: 0; margin-right: 1.8rem; }
+      .hero { padding: 2.5rem 1.5rem; }
+      .hero h1 { font-size: 2.8rem; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .newsletter input { width: 100%; margin-bottom: 0.8rem; }
+      .newsletter button { width: 100%; margin-left: 0; }
+    }
+
+    .infographic-box {
+      background: #ede5dd;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2.5rem 2rem;
+      margin: 2.8rem 0;
+      border: 1px solid #cbb4a8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .infographic-box .stat {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      background: #fcfaf7;
+      padding: 0.2rem 1.6rem;
+      border-radius: 60px;
+      box-shadow: 0 4px 0 #b48b7a;
+    }
+
+    /* contact page specific */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin: 2rem 0;
+    }
+    .contact-info {
+      background: #ede5dd;
+      padding: 2rem;
+      border-radius: 40px 8px 40px 8px;
+    }
+    .contact-info p {
+      margin-bottom: 0.8rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #cbb4a8;
+      border-radius: 40px;
+      background: #fcfaf7;
+      font-size: 1rem;
+      font-family: "Inter", sans-serif;
+    }
+    .contact-form textarea {
+      border-radius: 28px;
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-form button {
+      background: #1e1c1a;
+      border: none;
+      color: #f0e7e0;
+      padding: 0.8rem 2.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 1.2rem;
+      font-weight: 500;
+      border-bottom: 2px solid #b48b7a;
+    }
+    @media (max-width: 700px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <header class="site-header">
+    <div class="logo">Briar <span>· Hollowcrest</span></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- hero -->
+    <section class="hero">
+      <h1>Let the forest speak ·&nbsp;reach out</h1>
+      <p>We welcome inquiries, field notes, collaborations, and mycelial musings. Write to us — we reply as the mushrooms allow.</p>
+      <div class="hero-tags">
+        <span>🌲 old growth</span>
+        <span>🍄 spore prints</span>
+        <span>📬 correspondence</span>
+      </div>
+    </section>
+
+    <!-- contact grid -->
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>📍 Moss &amp; mycelium</h3>
+        <p><strong>Briar Hollowcrest Moss</strong><br />
+        c/o The Old Forge, Glen Affric<br />
+        IV4 7LY, Scotland</p>
+        <p><strong>✉️</strong> <a href="mailto:hello@briarhollowcrest.com">hello@briarhollowcrest.com</a></p>
+        <p><strong>📞</strong> +44 (0) 131 555 0192</p>
+        <div style="margin-top: 2rem;">
+          <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Social mycelium</h4>
+          <div class="social-links">
+            <a href="#">🌿 Mastodon</a>
+            <a href="#">🍄 Instagram</a>
+            <a href="#">📖 RSS</a>
+          </div>
+        </div>
+        <div style="margin-top: 2rem; background: #fcfaf7; padding: 1.2rem 1.5rem; border-radius: 40px 8px 40px 8px;">
+          <p style="margin: 0; font-style: italic;">“The fungi have no borders — neither do we.”</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a spore letter</h3>
+        <form>
+          <input type="text" placeholder="Your name" />
+          <input type="email" placeholder="your@forest.com" />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Your message …"></textarea>
+          <button type="submit">send →</button>
+        </form>
+        <p style="font-size: 0.85rem; color: #5f4c3d; margin-top: 0.8rem;">We reply within 3–5 sunrises. No spam, only forest wisdom.</p>
+      </div>
+    </div>
+
+    <!-- additional contact info: location / hours (table) -->
+    <h2>Field hours &amp; forest access</h2>
+    <table>
+      <thead><tr><th>Day</th><th>Open hours</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Monday – Friday</td><td>10:00 – 17:00</td><td>guided walks by appointment</td></tr>
+        <tr><td>Saturday</td><td>09:00 – 15:00</td><td>mycology clinic</td></tr>
+        <tr><td>Sunday</td><td>closed</td><td>forest rest day</td></tr>
+      </tbody>
+    </table>
+
+    <!-- infographic: small stat about correspondence -->
+    <div class="infographic-box">
+      <span class="stat">📬 98%</span>
+      <span style="font-weight:350;">of letters answered within a week</span>
+      <span class="stat">🌲 12+</span>
+      <span style="font-weight:350;">years of forest wisdom shared</span>
+    </div>
+
+    <!-- FAQ (contact related) -->
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item"><h4>Do you offer guided forest walks?</h4><p>Yes — we lead small-group mycology walks in the Affric region. Contact us for availability and seasonal schedules.</p></div>
+    <div class="faq-item"><h4>Can I send you a mushroom specimen for identification?</h4><p>Absolutely. Please include location, habitat, and photos. We’ll do our best to help, but we can’t guarantee edibility advice.</p></div>
+    <div class="faq-item"><h4>How can I support your work?</h4><p>Subscribe to our newsletter, share our essays, or become a patron of the forest. Every bit helps the mycelium grow.</p></div>
+
+    <!-- newsletter -->
+    <div class="newsletter">
+      <h3>📬 Moss &amp; mycelium letters</h3>
+      <p>Seasonal field notes, exclusive essays, and early access to new guides. No spam, only forest wisdom.</p>
+      <input type="email" placeholder="you@forest.com" />
+      <button>subscribe</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 Briar Hollowcrest Moss · all rights reserved</div>
+    <div>
+      <a href="#">about</a>
+      <a href="#">colophon</a>
+      <a href="#">contact</a>
+      <a href="#">rss</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

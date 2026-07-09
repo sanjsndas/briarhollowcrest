@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms · Briar Hollowcrest Moss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3ee;
+      color: #1e1c1a;
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #b48b7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin: 2rem 0 0.8rem;
+      color: #3f322b;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 75ch;
+      font-weight: 350;
+    }
+
+    a {
+      color: #5f3e2e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbb4a8;
+    }
+
+    a:hover {
+      border-bottom: 2px solid #5f3e2e;
+    }
+
+    .container {
+      padding: 2.5rem 3rem;
+    }
+
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      border-bottom: 1px solid #e3d6cd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      background: #1e1c1a;
+      color: #f0e7e0;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 40px 4px 40px 4px;
+    }
+
+    .logo span {
+      font-style: italic;
+      font-weight: 300;
+      color: #c9b1a2;
+    }
+
+    .nav a {
+      margin-left: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: none;
+      letter-spacing: 0.02em;
+      color: #2f2621;
+    }
+
+    .nav a:hover {
+      border-bottom: 2px solid #b48b7a;
+    }
+
+    .hero {
+      background: #eae0d8;
+      padding: 3rem 3rem 2.5rem;
+      margin: 0 0 1rem;
+      border-radius: 0 0 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 70ch;
+      margin: 1rem 0 0.5rem;
+      font-weight: 350;
+      color: #2f2621;
+    }
+
+    .featured-image {
+      margin: 2rem 0 1.5rem;
+      border-radius: 40px 8px 40px 8px;
+      overflow: hidden;
+      background: #dbccc0;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3f322b;
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200"><rect width="800" height="200" fill="%23dacbc0"/><circle cx="140" cy="100" r="50" fill="%23b48b7a" opacity="0.4"/><circle cx="320" cy="80" r="40" fill="%23997a68" opacity="0.3"/><circle cx="600" cy="120" r="60" fill="%23a58470" opacity="0.25"/><text x="420" y="120" font-family="Instrument Serif, serif" font-size="40" fill="%233f322b" opacity="0.6">mycelium &amp; moss</text></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .featured-image span {
+      background: #fcfaf7cc;
+      padding: 0.3rem 2.2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .card {
+      background: #fcfaf7;
+      padding: 1.8rem 1.8rem 2.2rem;
+      border-radius: 28px 8px 28px 8px;
+      border: 1px solid #e6d7cc;
+      box-shadow: 0 6px 0 #dacbc0;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6f5546;
+      margin-bottom: 0.6rem;
+    }
+
+    .infographic-box {
+      background: #ede5dd;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2.5rem 2rem;
+      margin: 2.8rem 0;
+      border: 1px solid #cbb4a8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .infographic-box .stat {
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      background: #fcfaf7;
+      padding: 0.2rem 1.6rem;
+      border-radius: 60px;
+      box-shadow: 0 4px 0 #b48b7a;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      border-top: 2px solid #e3d6cd;
+      padding: 2.5rem 3rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #3f322b;
+    }
+
+    .footer a {
+      border-bottom: none;
+      margin: 0 1rem 0 0;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1.5rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav a { margin-left: 0; margin-right: 1.8rem; }
+      .hero { padding: 2rem 1.5rem; }
+      .hero h1 { font-size: 2.8rem; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+
+    .terms-block {
+      background: #f7f1ec;
+      border-radius: 40px 8px 40px 8px;
+      padding: 2rem 2.5rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .terms-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-list {
+      list-style: none;
+      margin: 1.2rem 0 1.8rem 0;
+    }
+
+    .terms-list li {
+      padding: 0.8rem 0 0.8rem 2.2rem;
+      border-bottom: 1px solid #e3d6cd;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23b48b7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>') left center no-repeat;
+      background-size: 1.2rem;
+    }
+
+    .terms-list li:last-child {
+      border-bottom: none;
+    }
+
+    .small-note {
+      font-size: 0.9rem;
+      color: #5f4c3d;
+      background: #ede5dd;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin: 0.5rem 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- header -->
+  <header class="site-header">
+    <div class="logo">Briar <span>· Hollowcrest</span></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html" style="border-bottom: 2px solid #b48b7a;">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- terms hero -->
+    <section class="hero">
+      <h1>Terms of service</h1>
+      <p>Welcome to Briar Hollowcrest Moss. By walking through these digital woods, you agree to the following terms — rooted in respect, reciprocity, and the slow rhythm of the forest.</p>
+    </section>
+
+    <!-- feature image -->
+    <div class="featured-image">
+      <span>📜 · the fine print, forest‑style</span>
+    </div>
+
+    <!-- terms content -->
+    <div class="terms-block">
+      <h2 style="border-left-color: #997a68; margin-top: 0.2rem;">Our agreement</h2>
+      <p>These terms govern your use of the Briar Hollowcrest Moss website and its content. We reserve the right to update them occasionally; changes will be posted here. Your continued use constitutes acceptance.</p>
+
+      <ul class="terms-list">
+        <li><strong>Use of content</strong> — All essays, illustrations, and guides are the intellectual property of Briar Hollowcrest Moss and its contributors. You may share excerpts with attribution, but republishing or commercial use requires written permission.</li>
+        <li><strong>Community &amp; conduct</strong> — We welcome thoughtful discussion. Harassment, spam, or disrespect toward the forest or fellow walkers will result in removal from our platforms.</li>
+        <li><strong>Foraging &amp; safety</strong> — Our field guides are for educational purposes only. Always consult multiple sources and local experts before consuming any wild mushroom or plant. We are not liable for any harm resulting from misuse of information.</li>
+        <li><strong>Newsletter &amp; data</strong> — When you subscribe, we collect only your email address. We never share or sell your data. You may unsubscribe at any time.</li>
+        <li><strong>External links</strong> — We may link to other sites for reference; we are not responsible for their content or privacy practices.</li>
+      </ul>
+
+      <p>By using this site, you acknowledge that the forest is alive, and so are these terms — they grow and change as needed. If you have questions, please <a href="contact.html">reach out</a>.</p>
+    </div>
+
+    <!-- infographic: terms at a glance -->
+    <div class="infographic-box">
+      <span class="stat">📖 5</span>
+      <span style="font-weight:350;">core principles</span>
+      <span class="stat">🌿 100%</span>
+      <span style="font-weight:350;">forest‑friendly</span>
+    </div>
+
+    <!-- additional legal / disclaimer -->
+    <h2>Disclaimer &amp; liability</h2>
+    <div style="background: #ede5dd; padding: 1.8rem 2.2rem; border-radius: 60px 8px 60px 8px; margin: 0 0 2rem;">
+      <p style="margin-bottom: 0.6rem;"><strong>No substitute for expertise.</strong> The information provided on Briar Hollowcrest Moss is for general educational and entertainment purposes. It is not a substitute for professional advice, especially regarding foraging, mycology, or health.</p>
+      <p style="margin-bottom: 0;">We do not guarantee the accuracy, completeness, or usefulness of any content. Your use of the site is at your own risk. We are not liable for any losses, injuries, or damages arising from your use of our content or services.</p>
+    </div>
+
+    <!-- governance / governing law -->
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of Scotland, where Briar Hollowcrest Moss is rooted. Any disputes shall be resolved in the courts of the Scottish Highlands, in keeping with the spirit of the land.</p>
+
+    <!-- acceptance / last updated -->
+    <div style="background: #f7f1ec; border-radius: 40px 8px 40px 8px; padding: 1.2rem 2.2rem; margin: 2rem 0 0.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+      <span><strong>Last updated:</strong> 8 July 2026</span>
+      <span class="small-note">🌲 by using this site, you accept these terms</span>
+    </div>
+
+    <!-- simple newsletter (consistent with about) -->
+    <div class="newsletter" style="background: #eae0d8; padding: 2.5rem 2rem; border-radius: 60px 8px 60px 8px; margin: 2.5rem 0 0.5rem; text-align: center;">
+      <h3 style="font-size: 2.2rem; margin: 0 0 0.2rem; border-left: none; padding-left: 0;">🌲 stay connected</h3>
+      <p style="max-width: 60ch; margin: 0.5rem auto 1.5rem;">Seasonal notes, new essays, and forest wisdom — delivered to your clearing.</p>
+      <input type="email" placeholder="you@forest.com" style="padding: 0.8rem 1.6rem; border: 1px solid #b48b7a; border-radius: 60px; width: 280px; max-width: 80%; background: #fcfaf7; font-size: 1rem;" />
+      <button style="background: #1e1c1a; border: none; color: #f0e7e0; padding: 0.8rem 2.4rem; border-radius: 60px; font-weight: 500; font-size: 1rem; margin-left: 0.4rem; cursor: pointer;">subscribe</button>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>© 2026 Briar Hollowcrest Moss · all rights reserved</div>
+    <div>
+      <a href="about.html">about</a>
+      <a href="#">colophon</a>
+      <a href="contact.html">contact</a>
+      <a href="#">rss</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
